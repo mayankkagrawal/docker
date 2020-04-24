@@ -1,0 +1,12 @@
+version: '3'
+services:
+     centos_os:
+           image: centos:latest
+           volumes:
+                   - centos_vol:/root
+                   - /run/media/root/RHEL-8-0-0-BaseOS-x86_64:/dvd2
+           restart: always
+           ports:
+                   - 8081:80
+volumes:
+        centos_vol: 
